@@ -1,159 +1,67 @@
-linux Security Gap Analysis Project
- Project Overview
+# Gap Analysis Security Report
+
 ## Author
 Name: MH Nourhen  
 Date: 2025  
-Platform: Kali Linux
+Platform: Kali Linux  
 
+---
 
-This project presents a security gap analysis performed on a Linux system (Kali Linux) using an automated auditing script.
-The goal is to identify security misconfigurations, understand their risks, apply corrective actions, and validate improvements through a second scan.
+## 1. Introduction
+This project presents a basic security gap analysis performed on a Kali Linux system using an automated Bash script.  
+The goal is to identify common security misconfigurations, understand their potential risks, and apply remediation steps to improve the overall system security posture.
 
-This project demonstrates practical skills in:
+---
 
-Linux system hardening
+## 2. System Information
+- Operating System: Kali GNU/Linux Rolling 2025.3  
+- Kernel Version: 6.12.38  
+- Analysis Tool: `gap-analysis-checks.sh`  
 
-Security auditing
+---
 
-Risk analysis
+## 3. Methodology
+The analysis was conducted in three main phases:
+1. Initial system scan (before remediation)
+2. Manual remediation of identified security issues
+3. Second scan (after remediation) to verify improvements
 
-Documentation and reporting
+All scan outputs were saved for comparison and documentation purposes.
 
- Objectives
+---
 
-Identify security weaknesses on a Linux system
+## 4. Identified Security Gaps (Before Remediation)
 
-Analyze why these issues are dangerous
+### 4.1 Weak Password Policy
+- Password complexity rules were not strictly enforced.
+- Low password requirements increase the risk of brute-force and dictionary attacks.
 
-Apply recommended security fixes
+### 4.2 Firewall Not Installed
+- No active firewall was detected on the system.
+- This exposes the system to unauthorized network access.
 
-Re-run the audit to verify improvements
+### 4.3 Enabled Services
+- Multiple services were enabled by default.
+- Some services may not be strictly necessary and can increase the attack surface.
 
-Document results in a professional and structured way
+### 4.4 System Updates
+- No recent system update timestamp was detected.
+- Outdated systems are vulnerable to known exploits.
 
- Tools & Environment
+---
 
-Operating System: Kali Linux
+## 5. Remediation Actions
 
-Audit Script: gap-analysis-checks.sh
+### 5.1 Password Policy Hardening
+The password policy was strengthened by updating the `pwquality.conf` file:
+- Minimum password length set to 12
+- Enforced use of uppercase, lowercase, digits, and special characters
 
-Shell: Bash
+### 5.2 Firewall Considerations
+Although UFW was not available by default on Kali Linux, firewall status was reviewed using `iptables` to understand current network filtering rules.
 
-Version Control: Git & GitHub
+### 5.3 System Update
+The system package list was updated using:
+```bash
+sudo apt update && sudo apt upgrade -y
 
- Methodology
-1️⃣ Initial Security Scan (Before Fix)
-
-The audit script was executed to assess the system's security posture:
-
-./gap-analysis-checks.sh | tee gap-results.txt
-
-
-This scan revealed several security gaps related to:
-
-Password policy configuration
-
-System update status
-
-File permissions
-
-Security services configuration
-
- Screenshots of the initial scan are available in the screenshots/ directory.
-
-2️⃣ Security Issues Identified
-
-Some of the main issues detected include:
-
-Weak password policy settings
-
-Missing or outdated system updates
-
-Insecure file permissions
-
-Insufficient system hardening parameters
-
-These issues may expose the system to:
-
-Brute-force attacks
-
-Privilege escalation
-
-Unauthorized access
-
-Increased attack surface
-
-3️⃣ Corrective Actions Applied
-
-Based on best practices and AI-assisted recommendations, the following actions were performed:
-
-Strengthened password policy using pwquality.conf
-
-Reviewed system configurations
-
-Improved security-related parameters
-
-Applied configuration changes safely
-
-All actions were documented with screenshots for transparency.
-
-4️⃣ Second Security Scan (After Fix)
-
-After applying corrections, the script was executed again:
-
-./gap-analysis-checks.sh | tee gap-results-after.txt
-
-
- A comparison between both scans was performed using:
-
-diff gap-results.txt gap-results-after.txt
-
-
-The results show clear improvements in system security posture.
-
- Results Comparison
-Aspect	Before Fix	After Fix
-Password Policy	Weak	Strong
-Security Gaps	Multiple	Reduced
-Compliance Level	Low	Improved
-
-Screenshots and result files are included for validation.
-
- Project Structure
-gap-lab/
- gap-analysis-checks.sh
- gap-results.txt
- gap-results-after.txt
- README.md
- screenshots/
- Screenshot_*.png
-
- Key Learnings
-
-Understanding Linux security baselines is essential
-
-Small misconfigurations can lead to serious vulnerabilities
-
-Automation helps detect gaps quickly
-
-Validation after fixes is critical
-
- Conclusion
-
-This project highlights the importance of continuous security auditing and system hardening.
-By identifying vulnerabilities, applying fixes, and validating improvements, the system’s security posture was significantly enhanced.
-
- Author
-
-Linux Security Gap Analysis Project
- Built with passion for cybersecurity and system administration
-## Screenshots
-
-### Before Fixes
-![Before Scan](screenshots/before-scan.png)
-
-### After Fixes
-![After Scan](screenshots/after-scan.png)
-
-### Differences
-![Diff](screenshots/diff-results.png)
