@@ -1,0 +1,71 @@
+# Gap Analysis Security Report
+
+## Author
+Name: YOUR NAME  
+Date: 2025  
+Platform: Kali Linux  
+
+---
+
+## 1. Introduction
+This report presents a basic security gap analysis performed on a Kali Linux system using an automated analysis script.
+
+---
+
+## 2. System Information
+- OS: Kali GNU/Linux Rolling 2025.3
+- Kernel: 6.12.38
+- Analysis Tool: gap-analysis-checks.sh
+
+---
+
+## 3. Identified Security Gaps
+
+### 3.1 Weak Password Policy
+The system does not enforce strong password complexity requirements, making it vulnerable to brute-force and dictionary attacks.
+
+**Recommended Fix:**  
+Configure pwquality to enforce stronger passwords.
+
+---
+
+### 3.2 Firewall Not Installed
+The system does not have an active firewall, exposing it to unauthorized network access.
+
+**Recommended Fix:**  
+Install and enable UFW with restrictive default rules.
+
+---
+
+### 3.3 SSH Root Login Configuration
+Root login over SSH is not explicitly disabled, increasing the risk of unauthorized access.
+
+**Recommended Fix:**  
+Disable root login in SSH configuration.
+
+---
+
+### 3.4 Unnecessary Enabled Services
+Multiple services are enabled by default, increasing the system attack surface.
+
+**Recommended Fix:**  
+Disable unused services.
+
+---
+
+### 3.5 System Updates Not Verified
+The system update status is unclear, potentially leaving known vulnerabilities unpatched.
+
+**Recommended Fix:**  
+Update all system packages regularly.
+
+---
+
+## 4. Remediation Summary
+All identified gaps were addressed by applying security best practices such as enforcing strong passwords, enabling a firewall, securing SSH access, and updating the system.
+
+---
+
+## 5. Conclusion
+This gap analysis highlights the importance of proper system hardening. Applying the recommended fixes significantly improves the overall security posture of the system.
+
