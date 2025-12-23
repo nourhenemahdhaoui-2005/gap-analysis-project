@@ -142,3 +142,13 @@ By identifying vulnerabilities, applying fixes, and validating improvements, the
 
 Linux Security Gap Analysis Project
  Built with passion for cybersecurity and system administration
+## Screenshots
+
+### Before Fixes
+![Before Scan](screenshots/before-scan.png)
+
+### After Fixes
+![After Scan](screenshots/after-scan.png)
+
+### Differences
+![Diff](screenshots/diff-results.png)
