@@ -1,5 +1,10 @@
 linux Security Gap Analysis Project
  Project Overview
+## Author
+Name: MH Nourhen  
+Date: 2025  
+Platform: Kali Linux
+
 
 This project presents a security gap analysis performed on a Linux system (Kali Linux) using an automated auditing script.
 The goal is to identify security misconfigurations, understand their risks, apply corrective actions, and validate improvements through a second scan.
