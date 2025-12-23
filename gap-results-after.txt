@@ -1,0 +1,67 @@
+=== Basic Gap Analysis Checks ===
+
+0) System Version Information:
+Kernel Version:
+6.12.38+kali-amd64
+
+OS Release:
+PRETTY_NAME="Kali GNU/Linux Rolling"
+NAME="Kali GNU/Linux"
+VERSION_ID="2025.3"
+VERSION="2025.3"
+VERSION_CODENAME=kali-rolling
+ID=kali
+ID_LIKE=debian
+HOME_URL="https://www.kali.org/"
+SUPPORT_URL="https://forums.kali.org/"
+BUG_REPORT_URL="https://bugs.kali.org/"
+ANSI_COLOR="1;31"
+
+1) Password policy (pwquality):
+# minlen = 8
+# dcredit = 0
+# ucredit = 0
+# lcredit = 0
+# ocredit = 0
+minlen = 12
+dcredit = -1
+ucredit = -1
+lcredit = -1
+ocredit = -1
+
+2) Firewall (ufw) status:
+UFW is not installed.
+To install it, run: sudo apt install ufw -y
+
+3) SSH root login:
+No PermitRootLogin found
+
+4) Enabled services (short list):
+UNIT FILE                          STATE   PRESET
+accounts-daemon.service            enabled enabled
+console-setup.service              enabled enabled
+cron.service                       enabled enabled
+getty@.service                     enabled enabled
+grub-install-devices.service       enabled disabled
+haveged.service                    enabled enabled
+keyboard-setup.service             enabled enabled
+lightdm.service                    enabled disabled
+ModemManager.service               enabled enabled
+networking.service                 enabled enabled
+NetworkManager-dispatcher.service  enabled disabled
+NetworkManager-wait-online.service enabled disabled
+NetworkManager.service             enabled enabled
+regenerate-ssh-host-keys.service   enabled enabled
+smartmontools.service              enabled enabled
+systemd-pstore.service             enabled enabled
+systemd-timesyncd.service          enabled enabled
+virtualbox-guest-utils.service     enabled enabled
+
+
+5) World-writable files (limited search):
+(Searching in /etc /var /home /tmp only)
+
+6) Last package update time:
+No update stamp found
+
+=== End of checks ===
