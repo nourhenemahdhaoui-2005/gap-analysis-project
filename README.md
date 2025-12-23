@@ -1,5 +1,5 @@
-inux Security Gap Analysis Project
-📌 Project Overview
+linux Security Gap Analysis Project
+ Project Overview
 
 This project presents a security gap analysis performed on a Linux system (Kali Linux) using an automated auditing script.
 The goal is to identify security misconfigurations, understand their risks, apply corrective actions, and validate improvements through a second scan.
@@ -14,7 +14,7 @@ Risk analysis
 
 Documentation and reporting
 
-🎯 Objectives
+ Objectives
 
 Identify security weaknesses on a Linux system
 
@@ -26,7 +26,7 @@ Re-run the audit to verify improvements
 
 Document results in a professional and structured way
 
-🛠️ Tools & Environment
+ Tools & Environment
 
 Operating System: Kali Linux
 
@@ -36,7 +36,7 @@ Shell: Bash
 
 Version Control: Git & GitHub
 
-🔍 Methodology
+ Methodology
 1️⃣ Initial Security Scan (Before Fix)
 
 The audit script was executed to assess the system's security posture:
@@ -54,7 +54,7 @@ File permissions
 
 Security services configuration
 
-📸 Screenshots of the initial scan are available in the screenshots/ directory.
+ Screenshots of the initial scan are available in the screenshots/ directory.
 
 2️⃣ Security Issues Identified
 
@@ -99,14 +99,14 @@ After applying corrections, the script was executed again:
 ./gap-analysis-checks.sh | tee gap-results-after.txt
 
 
-📊 A comparison between both scans was performed using:
+ A comparison between both scans was performed using:
 
 diff gap-results.txt gap-results-after.txt
 
 
 The results show clear improvements in system security posture.
 
-📈 Results Comparison
+ Results Comparison
 Aspect	Before Fix	After Fix
 Password Policy	Weak	Strong
 Security Gaps	Multiple	Reduced
@@ -114,16 +114,16 @@ Compliance Level	Low	Improved
 
 Screenshots and result files are included for validation.
 
-📂 Project Structure
+ Project Structure
 gap-lab/
-│── gap-analysis-checks.sh
-│── gap-results.txt
-│── gap-results-after.txt
-│── README.md
-│── screenshots/
-│   ├── Screenshot_*.png
+ gap-analysis-checks.sh
+ gap-results.txt
+ gap-results-after.txt
+ README.md
+ screenshots/
+ Screenshot_*.png
 
-🧠 Key Learnings
+ Key Learnings
 
 Understanding Linux security baselines is essential
 
@@ -133,12 +133,12 @@ Automation helps detect gaps quickly
 
 Validation after fixes is critical
 
-🚀 Conclusion
+ Conclusion
 
 This project highlights the importance of continuous security auditing and system hardening.
 By identifying vulnerabilities, applying fixes, and validating improvements, the system’s security posture was significantly enhanced.
 
-🔗 Author
+ Author
 
 Linux Security Gap Analysis Project
-📌 Built with passion for cybersecurity and system administration
+ Built with passion for cybersecurity and system administration
