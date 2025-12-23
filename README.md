@@ -64,32 +64,6 @@ Although UFW was not available by default on Kali Linux, firewall status was rev
 The system package list was updated using:
 ```bash
 sudo apt update && sudo apt upgrade -y
-## 6. Second Scan Results (After Remediation)
 
-A second scan was performed after applying the fixes:
-
-./gap-analysis-checks.sh | tee gap-results-after.txt
-
-The results show:
-
-- Improved password policy enforcement
-- Reduced configuration gaps
-- Clear documentation of remaining limitations specific to Kali Linux
-
-## 7. Comparison (Before vs After)
-
-A comparison was performed using:
-
-diff gap-results.txt gap-results-after.txt
-
-Key improvements observed:
-
-- Stronger password policy values
-- Cleaner configuration output
-- Better system hardening baseline
-
-## 8. Screenshots
-
-All important steps and outputs are documented in the `screenshots/` directory.
 
 
